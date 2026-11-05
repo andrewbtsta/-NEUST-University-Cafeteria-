@@ -1,12 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/svg+xml" href="images/branding/favicon.svg">
+    <title>Order Confirmation | University Cafeteria</title>
 
-    <title>NEUST University Cafeteria</title>
+    <link rel="icon" href="images/branding/favicon.svg" type="image/svg+xml">
 
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/global.css">
@@ -16,19 +18,22 @@
 
 <body>
 
-    <!-- SIDEBAR CHECKBOX -->
+    <!-- =========================
+         HEADER
+    ========================== -->
+
     <input type="checkbox" id="sidebar-toggle">
 
-    <!-- HAMBURGER BUTTON -->
     <label for="sidebar-toggle" class="menu-btn">
         <span>☰</span>
     </label>
 
     <header>
+
         <label for="sidebar-toggle" class="close-btn">&times;</label>
 
-        <!-- LOGO -->
         <div class="align1">
+
             <img src="images/branding/logo1.svg"
                  class="logo2"
                  alt="University Cafeteria Logo">
@@ -37,9 +42,9 @@
                 <a href="index.html" id="university">UNIVERSITY</a>
                 <a href="index.html" id="cafeteria">CAFETERIA</a>
             </div>
+
         </div>
 
-        <!-- CENTER NAVIGATION -->
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">HOME</a></li>
@@ -49,30 +54,28 @@
             </ul>
         </nav>
 
-        <!-- RIGHT SIDE: SEARCH BAR AND CART -->
         <div class="header-right">
 
-        <!-- SEARCH BAR -->
-        <div class="nav-search">
-            <input type="text" id="nav-search"
-                placeholder="Search menu..." autocomplete="off">
-            <button type="button" id="search-btn">
-                <img
-                    src="images/icons/magnifying-glass (1).png"
-                    class="magnifying-glass"
-                    alt="Search"
-                >
-            </button>
-            <!-- SEARCH DROPDOWN -->
-            <div class="search-dropdown" id="search-dropdown">
+            <div class="nav-search">
 
-                <p class="dropdown-title">Popular Searches</p>
+                <input type="text"
+                       id="nav-search"
+                       placeholder="Search menu..."
+                       autocomplete="off">
 
-                <div id="search-suggestions"></div>
+                <button type="button" id="search-btn">
+                    <img src="images/icons/magnifying-glass (1).png"
+                         class="magnifying-glass"
+                         alt="Search">
+                </button>
+
+                <div class="search-dropdown" id="search-dropdown">
+                    <p class="dropdown-title">Popular Searches</p>
+                    <div id="search-suggestions"></div>
+                </div>
+
             </div>
-        </div>
 
-            <!-- CART -->
             <a href="cart.html" class="cart-link">
                 <img src="images/icons/shopping-cart.png"
                      class="shopIcon"
@@ -80,31 +83,57 @@
                 CART
                 <span class="quantity-logo"></span>
             </a>
+
         </div>
+
     </header>
 
 
-    <!-- ORDER CONFIRMATION -->
-    <section class="order">
+    <!-- =========================
+         ORDER CONFIRMATION
+    ========================== -->
 
-        <section class="alignment">
+    <main class="order">
+
+        <div class="order-layout">
+
+
+            <!-- DIV 1: ORDER CONFIRMED -->
 
             <div class="order-container">
-                <div class="check-circle">✓</div>
+
+                <div class="check-circle">
+                    ✓
+                </div>
 
                 <section class="special-title0">
+
                     <h1>
                         ORDER <span>CONFIRMED!</span>
                     </h1>
+
                     <p>Thank you for ordering!</p>
+
                 </section>
+
             </div>
 
-            <!-- ORDER DETAILS -->
-            <div class="order-container2">
 
-                <table>
+            <!-- DIV 2: ORDER RECEIPT AND SUMMARY -->
+
+            <div class="order-receipt">
+
+                <h2 class="receipt-title">
+                    ORDER RECEIPT
+                </h2>
+
+
+                <!-- ORDER DETAILS -->
+
+                <table class="details-table">
+
                     <tbody>
+
                         <tr>
                             <td>ORDER NO.</td>
                             <td id="order-number"></td>
@@ -124,116 +153,170 @@
                             <td>PAYMENT METHOD</td>
                             <td id="payment-method"></td>
                         </tr>
+
                     </tbody>
+
                 </table>
 
-            </div>
-        </section>
+
+                <!-- ORDER SUMMARY -->
+
+                <div class="receipt-summary">
+
+                    <h3>ORDER SUMMARY</h3>
 
 
-        <!-- ORDER SUMMARY AND PICK-UP TIME -->
-        <div class="alignment2">
+                    <!-- SCROLLABLE ITEMS -->
 
-            <!-- ORDER SUMMARY -->
-            <div class="order-summary">
+                    <div class="scroll">
 
-                <div class="scroll">
-                    <table class="order-table">
+                        <table class="order-table">
 
-                        <thead>
+                            <thead>
+
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Qty</th>
+                                    <th>Price</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="order-items">
+                                <!-- Order items will be inserted by JavaScript -->
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- FIXED TOTAL -->
+
+                    <table class="total-table">
+
+                        <tfoot>
+
                             <tr>
-                                <th>Item</th>
-                                <th>Qty</th>
-                                <th>Price</th>
+                                <td>Total:</td>
+                                <td id="order-total">₱0.00</td>
                             </tr>
-                        </thead>
 
-                        <tbody id="order-items">
-                            <!-- JavaScript adds order items here -->
-                        </tbody>
+                        </tfoot>
 
                     </table>
-                </div>
 
-                <!-- TOTAL -->
-                <table class="order-table total-table">
-                    <tfoot>
-                        <tr>
-                            <td>Total:</td>
-                            <td id="order-total">₱0.00</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                </div>
 
             </div>
 
 
-            <!-- ESTIMATED PICK-UP TIME -->
+            <!-- DIV 3: ESTIMATED PICK-UP TIME -->
+
             <div class="order-container3">
 
                 <div class="clock">
+
                     <div class="hand hour"></div>
                     <div class="hand minute"></div>
                     <div class="center"></div>
+
                 </div>
 
                 <div class="textTime">
+
                     <h2>estimated pick-up</h2>
-                    <h1 id="pickup-time">To be announced</h1>
+
+                    <h1 id="pickup-time">
+                        To be announced
+                    </h1>
+
                 </div>
 
             </div>
 
         </div>
 
-        <!-- NEXT STEPS -->
+
+        <!-- ACTION BUTTONS -->
+
         <div class="order-actions">
-            <a href="orders.html" class="action-btn primary">View Order History</a>
-            <a href="menu.html" class="action-btn secondary">Order Again</a>
+
+            <a href="orders.html" class="action-btn primary">
+                View Order History
+            </a>
+
+            <a href="menu.html" class="action-btn secondary">
+                Order Again
+            </a>
+
         </div>
-    </section>
+
+    </main>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer class="footer">
 
         <div class="footer-container">
 
             <div class="footer-brand">
+
                 <h2>University Cafeteria</h2>
+
                 <p>
                     Your convenient way to explore the menu and discover
                     delicious meals at the NEUST University Cafeteria.
                 </p>
+
             </div>
 
+
             <div class="footer-links">
+
                 <h3>Quick Links</h3>
+
                 <a href="index.html">Home</a>
                 <a href="menu.html">Menu</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact</a>
+
             </div>
 
+
             <div class="footer-explore">
+
                 <h3>Explore</h3>
+
                 <p>🍽️ Meals</p>
                 <p>🥤 Drinks</p>
                 <p>🍪 Snacks</p>
+
             </div>
 
         </div>
 
+
         <div class="footer-bottom">
+
             <p>
                 © 2026 NEUST University Cafeteria. All Rights Reserved.
                 This is a student project and is not an official NEUST website.
             </p>
+
         </div>
 
     </footer>
 
+
+    <!-- JAVASCRIPT -->
+
     <script src="js/order.js"></script>
     <script src="js/search.js"></script>
+
 </body>
+
 </html>

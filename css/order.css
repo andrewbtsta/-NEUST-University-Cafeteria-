@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -11,8 +12,85 @@ body {
 
 
 /* =========================
+   ORDER PAGE
+========================= */
+
+.order {
+    margin-top: 10%;
+    margin-bottom: 4%;
+    width: 100%;
+    min-height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================
+   MAIN GRID LAYOUT
+========================= */
+
+.order-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+        "div1 div2"
+        "div3 div2";
+
+    gap: 20px;
+
+    width: 90%;
+    max-width: 1120px;
+
+    margin: 0 auto;
+
+    align-items: stretch;
+}
+
+
+/* =========================
+   DIV 1: ORDER CONFIRMATION
+========================= */
+
+.order-container {
+    grid-area: div1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    width: 100%;
+    min-height: 194px;
+}
+
+.check-circle {
+    width: 202px;
+    height: 194px;
+
+    border-radius: 50%;
+
+    background-color: var(--yellow);
+    color: var(--beige);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 150px;
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
    TITLE
-   ========================= */
+========================= */
 
 .special-title0 {
     margin-top: 87px;
@@ -23,176 +101,128 @@ body {
     font-size: 29px;
     font-weight: bold;
     color: #3b69b4;
-    margin: 0;
 }
 
-.special-title0 span {
-    color: #ffb300;
+.special-title0 h1 span {
+    color: var(--yellow);
 }
 
 .special-title0 p {
     color: var(--blue);
+    font-size: 16px;
 }
 
 
 /* =========================
-   ORDER
-   ========================= */
+   DIV 2: ORDER RECEIPT
+========================= */
 
-.order {
-    margin-top: 10%;
-    margin-bottom: 4%;
+.order-receipt {
+    grid-area: div2;
+
     width: 100%;
-    min-height: 75vh;
-}
+    height: 100%;
+    min-height: 100%;
 
+    padding: 20px;
 
-/* =========================
-   TOP TWO BOXES
-   ========================= */
+    box-sizing: border-box;
 
-.alignment {
-    display: grid;
-    grid-template-columns: 545px 545px;
-    gap: 18px;
-    justify-content: center;
-}
-
-
-/* =========================
-   BOTTOM TWO BOXES
-   ========================= */
-
-.alignment2 {
-    display: grid;
-    grid-template-columns: 545px 545px;
-    gap: 18px;
-    justify-content: center;
-}
-
-
-/* =========================
-   ORDER CONTAINERS
-   ========================= */
-
-.order-container {
     display: flex;
-    gap: 31px;
-}
+    flex-direction: column;
 
-.order-container2 {
-    height: 204px;
-    width: 545px;
-    padding: 0;
-    margin: 19px 0;
     background-color: var(--yellow);
+
     border-radius: 30px;
+
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.25);
 }
 
-.order-container2 table {
-    padding: 10px;
-    width: 97%;
-    text-align: right;
+.receipt-title {
+    text-align: center;
+
+    color: var(--beige);
     font-size: 20px;
-    border-collapse: separate;
-    border-spacing: 0 15px;
-    color: white;
+
+    margin: 0 0 15px;
 }
 
-.order-container2 td:first-child {
+
+/* =========================
+   ORDER DETAILS
+========================= */
+
+.details-table {
+    width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 0 10px;
+
+    color: var(--beige);
+    font-size: 15px;
+}
+
+.details-table td {
+    padding: 4px 5px;
+    font-size: 15px;
+}
+
+.details-table td:first-child {
     text-align: left;
 }
 
-
-/* =========================
-   TIME CONTAINER
-   ========================= */
-
-.order-container3 {
-    display: flex;
-    height: 163px;
-    width: 536px;
-    padding: 0;
-    margin: 19px 0;
-    border: solid var(--blue) 6px;
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 30px;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.25);
+.details-table td:last-child {
+    text-align: right;
+    overflow-wrap: anywhere;
 }
 
-.textTime {
-    position: relative;
-    top: 28px;
-    left: 93px;
-    line-height: 16px;
-}
-
-.order-container3 h2 {
-    color: var(--yellow);
-}
-
-.order-container3 h1 {
-    color: var(--blue);
-}
 
 /* =========================
    ORDER SUMMARY
-   ========================= */
+========================= */
 
-.order-summary {
+.receipt-summary {
     display: flex;
     flex-direction: column;
+
+    flex: 1;
+    min-height: 280px;
+
     background-color: var(--blue);
-    overflow: hidden;
-    height: 176px;
-    width: 504px;
-    margin: 19px 0 0;
+    color: var(--beige);
+
     border-radius: 18px;
-    padding: 1px;
-    box-shadow: 0 8px 20px rgba(59, 99, 6, 0.25);
+
+    padding: 12px 15px;
+
     box-sizing: border-box;
+    overflow: hidden;
 }
 
-#order-items td {
-    padding: 6px 20px 0px 20px;
-}
-/* =========================
-   ORDER TABLE
-   ========================= */
+.receipt-summary h3 {
+    flex-shrink: 0;
 
-.order-table {
-    width: 100%;
-    border-collapse: collapse;
-    color: white;
-}
-
-.order-table th,
-.order-table td {
-    padding: 9px 0 5px 19px;
-    text-align: left;
-}
-
-.order-table th:nth-child(2),
-.order-table td:nth-child(2) {
     text-align: center;
+    font-size: 15px;
+
+    margin: 0;
+    padding-bottom: 8px;
+
+    border-bottom: 1px dashed rgba(255, 247, 235, 0.6);
 }
 
-.order-table th:last-child,
-.order-table td:last-child {
-    text-align: right;
-    padding-right: 19px;
-}
 
 /* =========================
-   VERTICAL SCROLLING
-   ========================= */
+   SCROLLABLE ITEM TABLE
+========================= */
 
 .scroll {
     flex: 1;
     min-height: 0;
+
     overflow-y: auto;
     overflow-x: hidden;
+
     scrollbar-width: none;
 }
 
@@ -200,333 +230,381 @@ body {
     display: none;
 }
 
-/* =========================
-   KEEP HEADER VISIBLE
-   ========================= */
+.order-table {
+    width: 100%;
 
-.order-table thead th {
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    background: var(--blue);
-    color: #fff7eb;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    color: var(--beige);
     font-size: 15px;
 }
 
-/* =========================
-   TOTAL AT THE BOTTOM
-   ========================= */
+.order-table th,
+.order-table td {
+    padding: 7px 5px;
 
-.total-table {
-    width: 100%;
-    margin-top: auto;
-    position: relative;
-    z-index: 20;
-    border-collapse: collapse;
-    background: var(--blue);
-    color: #fff7eb;
-    table-layout: fixed;
+    font-size: 15px;
+
+    box-sizing: border-box;
 }
 
-.total-table tfoot td {
-    position: static;
-    font-size: 20px;
-    font-weight: bold;
-    background: var(--blue);
+.order-table th {
+    text-align: left;
+
+    border-bottom: 1px dashed rgba(255, 247, 235, 0.6);
 }
 
-.total-table tfoot td:first-child {
-    border-bottom-left-radius: 18px;
+/* Column widths */
+
+.order-table th:nth-child(1),
+.order-table td:nth-child(1) {
+    width: 55%;
+    text-align: left;
 }
 
-.total-table tfoot td:nth-child(2) {
+.order-table th:nth-child(2),
+.order-table td:nth-child(2) {
+    width: 15%;
+    text-align: center;
+}
+
+.order-table th:nth-child(3),
+.order-table td:nth-child(3) {
+    width: 30%;
     text-align: right;
 }
 
-.total-table tfoot td:last-child {
-    padding-right: 19px;
-    border-bottom-right-radius: 18px;
-}
 
 /* =========================
-   SCROLLBAR TRACK
-   ========================= */
+   FIXED TOTAL TABLE
+========================= */
 
-.scroll::-webkit-scrollbar-track {
-    background: #fff7eb;
-    border-radius: 4px;
+.total-table {
+    flex-shrink: 0;
+
+    width: 100%;
+
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    background-color: var(--blue);
+    color: var(--beige);
 }
 
-.scroll::-webkit-scrollbar-thumb {
-    background: #aaa9a4;
-    border-radius: 8px;
+.total-table td {
+    padding: 10px 5px 5px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    border-top: 1px dashed rgba(255, 247, 235, 0.6);
+
+    box-sizing: border-box;
 }
 
-.scroll::-webkit-scrollbar-thumb:hover {
-    background: #b5b9b9;
+/* Match the Price column position */
+
+.total-table td:first-child {
+    width: 70%;
+    text-align: left;
 }
+
+.total-table td:last-child {
+    width: 30%;
+    text-align: right;
+}
+
 
 /* =========================
-   CHECK CIRCLE
-   ========================= */
+   DIV 3: PICKUP TIME
+========================= */
 
-.check-circle {
-    position: relative;
-    width: 202px;
-    height: 194px;
-    border-radius: 50%;
-    background-color: var(--yellow);
+.order-container3 {
+    grid-area: div3;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--beige);
-    font-size: 150px;
-    font-weight: bold;
+
+    flex-direction: row;
+    gap: 20px;
+
+    width: 100%;
+    min-height: 163px;
+
+    box-sizing: border-box;
+
+    border: 6px solid var(--blue);
+    border-radius: 30px;
+
+    background-color: transparent;
+
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.25);
 }
 
 
 /* =========================
    CLOCK
-   ========================= */
+========================= */
 
 .clock {
+    position: relative;
+
     width: 124px;
     height: 118px;
+
     border: 5px solid var(--blue);
     border-radius: 50%;
-    position: relative;
-    top: 18px;
-    left: 50px;
+
     background-color: var(--beige);
+
+    flex-shrink: 0;
 }
 
 .hand {
     position: absolute;
-    background-color: var(--blue);
-    border-radius: 10px;
-    transform-origin: bottom center;
+
     left: 50%;
     bottom: 50%;
+
+    transform-origin: bottom center;
+
+    background-color: var(--blue);
+
+    border-radius: 10px;
 }
 
 .hour {
     width: 5px;
     height: 20px;
+
     transform: translateX(-50%) rotate(-7deg);
 }
 
 .minute {
     width: 4px;
     height: 27px;
+
     transform: translateX(-50%) rotate(135deg);
 }
 
 .center {
+    position: absolute;
+
     width: 9px;
     height: 9px;
+
     background-color: var(--blue);
+
     border-radius: 50%;
-    position: absolute;
+
     left: 50%;
     top: 50%;
+
     transform: translate(-50%, -50%);
 }
 
 
 /* =========================
-   NEXT-STEP BUTTONS
-   ========================= */
+   PICKUP TEXT
+========================= */
+
+.textTime {
+    position: static;
+
+    text-align: center;
+    line-height: 16px;
+}
+
+.textTime h2 {
+    color: var(--yellow);
+    font-size: 20px;
+}
+
+.textTime h1 {
+    color: var(--blue);
+    font-size: 27px;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
 
 .order-actions {
     display: flex;
+
     justify-content: center;
+    align-items: center;
+
     flex-wrap: wrap;
     gap: 18px;
+
     margin-top: 28px;
 }
 
 .action-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     min-width: 240px;
     height: 50px;
-    padding: 0 26px;
-    box-sizing: border-box;
-    border-radius: 30px;
-    font-size: 15px;
-    text-decoration: none;
-    transition: 0.3s;
-}
 
-.action-btn:hover {
-    filter: brightness(1.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+
+    box-sizing: border-box;
 }
 
 .action-btn.primary {
-    background: var(--yellow);
+    background-color: var(--blue);
     color: var(--beige);
 }
 
 .action-btn.secondary {
-    border: 3px solid var(--blue);
-    color: var(--blue);
+    background-color: var(--yellow);
+    color: white;
 }
 
-.action-btn.secondary:hover {
-    border: 3px solid var(--blue);
-    color: var(--beige);
-    background-color: var(--blue);
+.action-btn:hover {
+    filter: brightness(1.3);
 }
+
 
 /* =========================
-   RESPONSIVE 768px
-   ========================= */
+   RESPONSIVE
+========================= */
 
 @media (max-width: 768px) {
 
-    /* Title */
+    .order {
+        margin-top: 80px;
+        margin-bottom: 30px;
+
+        padding: 0 20px;
+
+        min-height: auto;
+
+        box-sizing: border-box;
+    }
+
+    .order-layout {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "div1"
+            "div2"
+            "div3";
+
+        gap: 20px;
+
+        width: 100%;
+    }
+
+
+    /* DIV 1 */
+
+    .order-container {
+        flex-direction: column;
+
+        gap: 12px;
+
+        min-height: auto;
+    }
+
+    .check-circle {
+        width: 150px;
+        height: 145px;
+
+        font-size: 110px;
+    }
 
     .special-title0 {
-        margin-top: 34px;
-        padding: 0 20px;
+        margin-top: 10px;
+        text-align: center;
     }
 
     .special-title0 h1 {
         font-size: 25px;
-        text-align: center;
     }
 
     .special-title0 p {
-        text-align: center;
         font-size: 14px;
         line-height: 20px;
     }
 
 
-    /* Order */
+    /* DIV 2 */
 
-    .order {
-        margin-top: 80px;
-        margin-bottom: 30px;
-        min-height: auto;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-
-
-    /* Change both grids to one column */
-
-    .alignment,
-    .alignment2 {
-        grid-template-columns: 1fr;
-        gap: 12px;
+    .order-receipt {
         width: 100%;
-        justify-items: center;
-    }
+        height: auto;
 
+        min-height: 400px;
 
-    /* Containers */
+        padding: 15px;
 
-    .order-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .order-container2 {
-        width: 100%;
-        max-width: 545px;
-        height: 155px;
-        margin: 10px 0;
-        box-sizing: border-box;
         border-radius: 25px;
     }
 
-
-    /* Order table */
-
-    .order-container2 table {
-        width: 97%;
-        padding-left: 19px;
-        font-size: 16px;
-        border-spacing: 0 10px;
+    .receipt-title {
+        font-size: 18px;
     }
 
-
-    /* Time container */
-
-    .order-container3 {
-        width: 100%;
-        max-width: 538px;
-        height: 155px;
-        box-sizing: border-box;
-        margin: 10px 0;
-        border-radius: 25px;
-    }
-
-    .textTime {
-        top: 28px;
-        left: 60px;
-        line-height: 16px;
+    .details-table,
+    .details-table td {
         font-size: 13px;
     }
 
+    .receipt-summary {
+        flex: 1;
+        min-height: 220px;
 
-    /* Order summary */
-
-    .order-summary {
-        width: 100%;
-        max-width: 511px;
-        height: 171px;
-        box-sizing: border-box;
-        
+        padding: 10px 12px;
     }
 
-
-    /* Order table */
+    .receipt-summary h3 {
+        font-size: 13px;
+    }
 
     .order-table th,
     .order-table td {
-        padding-top: 7px;
-        padding-left: 20px;
+        font-size: 13px;
+        padding: 6px 5px;
+    }
+
+    .total-table td {
         font-size: 13px;
     }
 
-    .order-table th:last-child,
-    .order-table td:last-child {
-        padding-right: 20px;
+
+    /* DIV 3 */
+
+    .order-container3 {
+        width: 100%;
+        min-height: 163px;
+
+        flex-direction: row;
+
+        gap: 15px;
+
+        border-width: 4px;
+        border-radius: 25px;
     }
-
-    .order-table thead {
-        font-size: 17px;
-    }
-
-    .order-table tfoot td {
-        padding: 14px 5px;
-        font-size: 17px;
-    }
-
-
-    /* Check circle */
-
-    .check-circle {
-        width: 150px;
-        height: 145px;
-        font-size: 110px;
-    }
-
-
-    /* Clock */
 
     .clock {
         width: 95px;
         height: 90px;
+
         border-width: 4px;
-        top: 15px;
-        left: 38px;
     }
 
     .hour {
@@ -543,4 +621,34 @@ body {
         width: 7px;
         height: 7px;
     }
+
+    .textTime {
+        line-height: 14px;
+        text-align: left;
+    }
+
+    .textTime h2 {
+        font-size: 15px;
+    }
+
+    .textTime h1 {
+        font-size: 21px;
+    }
+
+
+    /* BUTTONS */
+
+    .order-actions {
+        margin-top: 25px;
+        gap: 12px;
+
+        width: 90%;
+    }
+
+    .action-btn {
+        width: 100%;
+        max-width: 545px;
+        min-width: 0;
+    }
+
 }
