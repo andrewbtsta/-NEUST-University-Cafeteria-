@@ -1,0 +1,18 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <!-- Plate -->
+    <circle cx="50" cy="52" r="22" fill="#fff7eb"/>
+    <circle cx="50" cy="52" r="16" fill="#ffb300"/>
+
+    <!-- Off-white Fork -->
+    <g stroke="#fff7eb" stroke-width="4.5" stroke-linecap="round" fill="none">
+        <path d="M22 25 V42 M14 25 V35 M22 25 V35 M30 25 V35 M22 42 V66"/>
+    </g>
+
+    <!-- Off-white Spoon -->
+    <ellipse cx="78" cy="30" rx="6.5" ry="8.5" fill="#fff7eb"/>
+    <path d="M78 38 V66"
+          stroke="#fff7eb"
+          stroke-width="4.5"
+          stroke-linecap="round"/>
+</svg>

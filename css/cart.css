@@ -1,0 +1,500 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--beige);
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* My Cart Title */
+
+.special-title2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 120px 0 0;
+    width: 100%;
+}
+
+.special-title2 .line:first-child {
+    flex: 5;
+    height: 5px;
+    background: var(--yellow);
+    border-radius: 10px;
+}
+
+.special-title2 .line:last-child {
+    flex: 5;
+    height: 5px;
+    background: var(--blue);
+    border-radius: 10px;
+}
+
+.special-title2 h2 {
+    margin: 0;
+    white-space: nowrap;
+    font-size: 36px;
+    color: var(--yellow);
+}
+
+.special-title2 h2 span {
+    color: var(--blue);
+}
+
+/* Cart Table */
+
+.forCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    width: 100%;
+}
+
+.forCart table {
+    width: 80%;
+    margin: 50px auto 4%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    border-radius: 27px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(6, 43, 99, 0.2);
+}
+
+/* Table Header */
+
+.forCart thead {
+    background: var(--blue);
+}
+
+.forCart thead th {
+    padding: 20px 15px;
+    color: var(--beige);
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.forCart thead th:nth-child(1) {
+    text-align: left;
+    padding-left: 9%;
+}
+
+/* Cart Items */
+
+.forCart tbody td {
+    padding: 22px 15px;
+    text-align: center;
+    color: var(--blue);
+    font-weight: 600;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.forCart tbody tr:hover {
+    background: #f8fbff;
+}
+
+/* Product Image */
+
+.forCart img {
+    width: 126px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Price */
+
+.price {
+    font-family:
+        'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+}
+
+/* Quantity Buttons */
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.quantity button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: var(--blue);
+    color: var(--beige);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quantity button:hover {
+    background: var(--yellow);
+    color: var(--blue);
+}
+
+.quantity-number {
+    min-width: 20px;
+    font-size: 16px;
+}
+
+/* Remove Button */
+
+.remove-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--beige);
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.remove-btn:hover {
+    filter: brightness(1.1);
+    color: var(--blue);
+    transform: scale(1.1);
+}
+
+/* Cart Total */
+
+.forCart tfoot td {
+    padding: 25px;
+    background: #f5f8fc;
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Bottom Links */
+
+.conshop,
+.checkout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 52px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.conshop {
+    background: var(--blue);
+}
+
+.checkout {
+    background: var(--yellow);
+}
+
+.conshop h1,
+.checkout h1 {
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--beige);
+}
+
+.conshop:hover {
+    filter: brightness(1.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(6, 43, 99, 0.25);
+}
+
+.checkout:hover {
+    filter: brightness(1.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(6, 43, 99, 0.25);
+}
+
+/* Remove List Markers */
+
+ul,
+li {
+    list-style: none;
+}
+
+/* empty */
+
+.empty-cart {
+    margin-top: -107px;
+    text-align: center;
+    padding: 50px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.empty-cart h2 {
+    color: var(--blue);
+    margin-bottom: 12px;
+    font-size: 50px;
+}
+
+.empty-cart p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.shop-now {
+    display: inline-block;
+    background-color: var(--yellow);
+    color: #fff7eb;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.shop-now:hover {
+    filter: brightness(1.1);
+}
+
+/* Order Type */
+.order-type {
+    width: 82%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: var(--beige);
+    color: var(--darkblue);
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.order-type:focus {
+    border-color: #ffb300;
+}
+
+/* Rice Quantity */
+.rice-qty {
+    width: 80px;
+    padding: 8px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: var(--beige);
+    color: var(--darkblue);
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.rice-qty:focus {
+    border-color: #ffb300;
+}
+
+/* Mobile Responsive: cart rows become cards */
+
+@media (max-width: 768px) {
+
+    .special-title2 {
+        margin-top: 90px;
+        gap: 10px;
+    }
+
+    .special-title2 h2 {
+        font-size: 26px;
+    }
+
+    .special-title2 .line:first-child,
+    .special-title2 .line:last-child {
+        height: 4px;
+    }
+
+    .forCart {
+        display: block;
+        min-height: auto;
+        padding: 10px 28px 40px;
+        overflow-x: visible;
+    }
+
+    /* Drop table layout */
+    .forCart table,
+    .forCart tbody,
+    .forCart tfoot,
+    .forCart tr,
+    .forCart td {
+        display: block;
+    }
+
+    .forCart table {
+        width: 84%;
+        min-width: 0;
+        margin: 16px 0;
+        border-radius: 18px;
+    }
+
+    .forCart thead {
+        display: none;             /* labels are added per cell below */
+    }
+
+    /* Each item = one card */
+    .forCart tbody tr {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        gap: 8px 12px;
+        padding: 14px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .forCart tbody td {
+        padding: 0;
+        border-bottom: none;
+        font-size: 13px;
+    }
+
+    .forCart img {
+        width: 90px;
+        height: 62px;
+        border-radius: 8px;
+    }
+
+    /* Image | name | remove */
+    .forCart tbody td:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1 / 3;
+    }
+
+    .forCart tbody td:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: left;
+        align-self: end;
+        font-size: 14px;
+    }
+
+    .forCart tbody td:nth-child(8) {
+        grid-column: 2;
+        grid-row: 2;
+        text-align: right;
+        align-self: start;
+    }
+
+    /* Price, Qty, Rice, Order Type, Subtotal: label left, value right */
+    .forCart tbody td:nth-child(n+3):nth-child(-n+7) {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        text-align: right;
+    }
+
+    .forCart tbody td:nth-child(n+3):nth-child(-n+7)::before {
+        font-size: 11px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        opacity: 0.7;
+    }
+
+    .forCart tbody td:nth-child(3)::before { content: "Price"; }
+    .forCart tbody td:nth-child(4)::before { content: "Qty"; }
+    .forCart tbody td:nth-child(5)::before { content: "Rice"; }
+    .forCart tbody td:nth-child(6)::before { content: "Order Type"; }
+    .forCart tbody td:nth-child(7)::before { content: "Subtotal"; }
+
+    .quantity {
+        gap: 10px;
+    }
+
+    .quantity button {
+        width: 30px;
+        height: 30px;
+        font-size: 17px;
+    }
+
+    .quantity-number {
+        font-size: 14px;
+    }
+
+    .remove-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+    }
+
+    .order-type {
+        width: 60%;
+        max-width: none;
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .rice-qty {
+        width: 70px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Footer: total, then buttons stacked */
+    .forCart tfoot td {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    #cart-total {
+        text-align: left !important;
+    }
+
+    .forCart tfoot tr:last-child td {
+        padding: 8px 15px;
+    }
+
+    .forCart tfoot tr:last-child td:last-child {
+        padding-bottom: 20px;
+    }
+
+    .conshop,
+    .checkout {
+        min-height: 46px;
+    }
+
+    .conshop h1,
+    .checkout h1 {
+        font-size: 14px;
+    }
+
+    /* Empty cart: no negative margin on mobile */
+    .empty-cart {
+        margin-top: 0;
+        padding: 30px 15px;
+    }
+
+    .empty-cart h2 {
+        font-size: 28px;
+    }
+
+    .shop-now {
+        padding: 10px 20px;
+    }
+}

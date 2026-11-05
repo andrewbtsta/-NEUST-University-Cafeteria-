@@ -1,0 +1,546 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--beige);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+/* =========================
+   TITLE
+   ========================= */
+
+.special-title0 {
+    margin-top: 87px;
+    line-height: 15px;
+}
+
+.special-title0 h1 {
+    font-size: 29px;
+    font-weight: bold;
+    color: #3b69b4;
+    margin: 0;
+}
+
+.special-title0 span {
+    color: #ffb300;
+}
+
+.special-title0 p {
+    color: var(--blue);
+}
+
+
+/* =========================
+   ORDER
+   ========================= */
+
+.order {
+    margin-top: 10%;
+    margin-bottom: 4%;
+    width: 100%;
+    min-height: 75vh;
+}
+
+
+/* =========================
+   TOP TWO BOXES
+   ========================= */
+
+.alignment {
+    display: grid;
+    grid-template-columns: 545px 545px;
+    gap: 18px;
+    justify-content: center;
+}
+
+
+/* =========================
+   BOTTOM TWO BOXES
+   ========================= */
+
+.alignment2 {
+    display: grid;
+    grid-template-columns: 545px 545px;
+    gap: 18px;
+    justify-content: center;
+}
+
+
+/* =========================
+   ORDER CONTAINERS
+   ========================= */
+
+.order-container {
+    display: flex;
+    gap: 31px;
+}
+
+.order-container2 {
+    height: 204px;
+    width: 545px;
+    padding: 0;
+    margin: 19px 0;
+    background-color: var(--yellow);
+    border-radius: 30px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.25);
+}
+
+.order-container2 table {
+    padding: 10px;
+    width: 97%;
+    text-align: right;
+    font-size: 20px;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    color: white;
+}
+
+.order-container2 td:first-child {
+    text-align: left;
+}
+
+
+/* =========================
+   TIME CONTAINER
+   ========================= */
+
+.order-container3 {
+    display: flex;
+    height: 163px;
+    width: 536px;
+    padding: 0;
+    margin: 19px 0;
+    border: solid var(--blue) 6px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.25);
+}
+
+.textTime {
+    position: relative;
+    top: 28px;
+    left: 93px;
+    line-height: 16px;
+}
+
+.order-container3 h2 {
+    color: var(--yellow);
+}
+
+.order-container3 h1 {
+    color: var(--blue);
+}
+
+/* =========================
+   ORDER SUMMARY
+   ========================= */
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue);
+    overflow: hidden;
+    height: 176px;
+    width: 504px;
+    margin: 19px 0 0;
+    border-radius: 18px;
+    padding: 1px;
+    box-shadow: 0 8px 20px rgba(59, 99, 6, 0.25);
+    box-sizing: border-box;
+}
+
+#order-items td {
+    padding: 6px 20px 0px 20px;
+}
+/* =========================
+   ORDER TABLE
+   ========================= */
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+.order-table th,
+.order-table td {
+    padding: 9px 0 5px 19px;
+    text-align: left;
+}
+
+.order-table th:nth-child(2),
+.order-table td:nth-child(2) {
+    text-align: center;
+}
+
+.order-table th:last-child,
+.order-table td:last-child {
+    text-align: right;
+    padding-right: 19px;
+}
+
+/* =========================
+   VERTICAL SCROLLING
+   ========================= */
+
+.scroll {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* =========================
+   KEEP HEADER VISIBLE
+   ========================= */
+
+.order-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--blue);
+    color: #fff7eb;
+    font-size: 15px;
+}
+
+/* =========================
+   TOTAL AT THE BOTTOM
+   ========================= */
+
+.total-table {
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+    z-index: 20;
+    border-collapse: collapse;
+    background: var(--blue);
+    color: #fff7eb;
+    table-layout: fixed;
+}
+
+.total-table tfoot td {
+    position: static;
+    font-size: 20px;
+    font-weight: bold;
+    background: var(--blue);
+}
+
+.total-table tfoot td:first-child {
+    border-bottom-left-radius: 18px;
+}
+
+.total-table tfoot td:nth-child(2) {
+    text-align: right;
+}
+
+.total-table tfoot td:last-child {
+    padding-right: 19px;
+    border-bottom-right-radius: 18px;
+}
+
+/* =========================
+   SCROLLBAR TRACK
+   ========================= */
+
+.scroll::-webkit-scrollbar-track {
+    background: #fff7eb;
+    border-radius: 4px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #aaa9a4;
+    border-radius: 8px;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: #b5b9b9;
+}
+
+/* =========================
+   CHECK CIRCLE
+   ========================= */
+
+.check-circle {
+    position: relative;
+    width: 202px;
+    height: 194px;
+    border-radius: 50%;
+    background-color: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--beige);
+    font-size: 150px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   CLOCK
+   ========================= */
+
+.clock {
+    width: 124px;
+    height: 118px;
+    border: 5px solid var(--blue);
+    border-radius: 50%;
+    position: relative;
+    top: 18px;
+    left: 50px;
+    background-color: var(--beige);
+}
+
+.hand {
+    position: absolute;
+    background-color: var(--blue);
+    border-radius: 10px;
+    transform-origin: bottom center;
+    left: 50%;
+    bottom: 50%;
+}
+
+.hour {
+    width: 5px;
+    height: 20px;
+    transform: translateX(-50%) rotate(-7deg);
+}
+
+.minute {
+    width: 4px;
+    height: 27px;
+    transform: translateX(-50%) rotate(135deg);
+}
+
+.center {
+    width: 9px;
+    height: 9px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* =========================
+   NEXT-STEP BUTTONS
+   ========================= */
+
+.order-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 240px;
+    height: 50px;
+    padding: 0 26px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    filter: brightness(1.2);
+}
+
+.action-btn.primary {
+    background: var(--yellow);
+    color: var(--beige);
+}
+
+.action-btn.secondary {
+    border: 3px solid var(--blue);
+    color: var(--blue);
+}
+
+.action-btn.secondary:hover {
+    border: 3px solid var(--blue);
+    color: var(--beige);
+    background-color: var(--blue);
+}
+
+/* =========================
+   RESPONSIVE 768px
+   ========================= */
+
+@media (max-width: 768px) {
+
+    /* Title */
+
+    .special-title0 {
+        margin-top: 34px;
+        padding: 0 20px;
+    }
+
+    .special-title0 h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .special-title0 p {
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+    /* Order */
+
+    .order {
+        margin-top: 80px;
+        margin-bottom: 30px;
+        min-height: auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+
+    /* Change both grids to one column */
+
+    .alignment,
+    .alignment2 {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        width: 100%;
+        justify-items: center;
+    }
+
+
+    /* Containers */
+
+    .order-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .order-container2 {
+        width: 100%;
+        max-width: 545px;
+        height: 155px;
+        margin: 10px 0;
+        box-sizing: border-box;
+        border-radius: 25px;
+    }
+
+
+    /* Order table */
+
+    .order-container2 table {
+        width: 97%;
+        padding-left: 19px;
+        font-size: 16px;
+        border-spacing: 0 10px;
+    }
+
+
+    /* Time container */
+
+    .order-container3 {
+        width: 100%;
+        max-width: 538px;
+        height: 155px;
+        box-sizing: border-box;
+        margin: 10px 0;
+        border-radius: 25px;
+    }
+
+    .textTime {
+        top: 28px;
+        left: 60px;
+        line-height: 16px;
+        font-size: 13px;
+    }
+
+
+    /* Order summary */
+
+    .order-summary {
+        width: 100%;
+        max-width: 511px;
+        height: 171px;
+        box-sizing: border-box;
+        
+    }
+
+
+    /* Order table */
+
+    .order-table th,
+    .order-table td {
+        padding-top: 7px;
+        padding-left: 20px;
+        font-size: 13px;
+    }
+
+    .order-table th:last-child,
+    .order-table td:last-child {
+        padding-right: 20px;
+    }
+
+    .order-table thead {
+        font-size: 17px;
+    }
+
+    .order-table tfoot td {
+        padding: 14px 5px;
+        font-size: 17px;
+    }
+
+
+    /* Check circle */
+
+    .check-circle {
+        width: 150px;
+        height: 145px;
+        font-size: 110px;
+    }
+
+
+    /* Clock */
+
+    .clock {
+        width: 95px;
+        height: 90px;
+        border-width: 4px;
+        top: 15px;
+        left: 38px;
+    }
+
+    .hour {
+        width: 4px;
+        height: 16px;
+    }
+
+    .minute {
+        width: 3px;
+        height: 22px;
+    }
+
+    .center {
+        width: 7px;
+        height: 7px;
+    }
+}

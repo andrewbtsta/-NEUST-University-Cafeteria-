@@ -1,0 +1,21 @@
+:root {
+    --blue: #3b69b4;
+    --yellow: #ffb300;
+    --beige: #fff7eb;
+    --darkblue: #1a3d75;
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('../fonts/Lovelo\ Black.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Myfont2';
+    src: url('../font/Raleway-Thin.ttf');
+}
+
+* {
+    font-family: 'MyFont';
+}
+

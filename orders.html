@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/svg+xml" href="images/branding/favicon.svg">
+
+    <title>NEUST University Cafeteria</title>
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/orders.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR CHECKBOX -->
+    <input type="checkbox" id="sidebar-toggle">
+
+    <!-- HAMBURGER BUTTON -->
+    <label for="sidebar-toggle" class="menu-btn">
+        <span>☰</span>
+    </label>
+
+    <header>
+        <label for="sidebar-toggle" class="close-btn">&times;</label>
+
+        <!-- LOGO -->
+        <div class="align1">
+            <img src="images/branding/logo1.svg"
+                 class="logo2"
+                 alt="University Cafeteria Logo">
+
+            <div id="logo">
+                <a href="index.html" id="university">UNIVERSITY</a>
+                <a href="index.html" id="cafeteria">CAFETERIA</a>
+            </div>
+        </div>
+
+        <!-- CENTER NAVIGATION -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="orders.html" class="active">ORDERS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!-- RIGHT SIDE: SEARCH BAR AND CART -->
+        <div class="header-right">
+
+        <!-- SEARCH BAR -->
+        <div class="nav-search">
+            <input type="text" id="nav-search"
+                placeholder="Search menu..." autocomplete="off">
+            <button type="button" id="search-btn">
+                <img
+                    src="images/icons/magnifying-glass (1).png"
+                    class="magnifying-glass"
+                    alt="Search"
+                >
+            </button>
+            <!-- SEARCH DROPDOWN -->
+            <div class="search-dropdown" id="search-dropdown">
+
+                <p class="dropdown-title">Popular Searches</p>
+
+                <div id="search-suggestions"></div>
+            </div>
+        </div>
+
+            <!-- CART -->
+            <a href="cart.html" class="cart-link">
+                <img src="images/icons/shopping-cart.png"
+                     class="shopIcon"
+                     alt="">
+                CART
+                <span class="quantity-logo"></span>
+            </a>
+        </div>
+    </header>
+
+
+    <!-- PAGE TITLE -->
+    <section class="special-title0">
+        <div class="line0"></div>
+        <h2>ORDER <span>HISTORY</span></h2>
+        <div class="line0"></div>
+    </section>
+
+    <!-- HISTORY -->
+    <section class="history">
+
+        <!-- SUMMARY + TOOLS -->
+        <div class="history-top" id="history-top" hidden>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number" id="stat-orders">0</span>
+                    <span class="stat-label">Orders</span>
+                </div>
+            </div>
+            <button type="button" class="clear-btn" id="clear-history">Clear history</button>
+        </div>
+
+        <!-- ORDER CARDS -->
+        <div class="history-list" id="history-list"></div>
+
+        <!-- EMPTY STATE -->
+        <div class="history-empty" id="history-empty" hidden>
+            <div class="empty-icon">&#128203;</div>
+            <h3>No orders yet</h3>
+            <p>Orders you place will show up here.</p>
+            <a href="menu.html" class="action-btn primary">Browse the Menu</a>
+        </div>
+
+        <p class="history-note" id="history-note" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>University Cafeteria</h2>
+                <p>
+                    Your convenient way to explore the menu and discover
+                    delicious meals at the NEUST University Cafeteria.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-explore">
+                <h3>Explore</h3>
+                <p>🍽️ Meals</p>
+                <p>🥤 Drinks</p>
+                <p>🍪 Snacks</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 NEUST University Cafeteria. All Rights Reserved.
+                This is a student project and is not an official NEUST website.
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="js/orders.js"></script>
+    <script src="js/quantity.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

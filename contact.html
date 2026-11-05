@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="images/branding/favicon.svg">
+    <title>NEUST University Cafeteria</title>
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+</head>
+<body>
+    <!-- SIDEBAR CHECKBOX -->
+    <input type="checkbox" id="sidebar-toggle">
+    <!-- HAMBURGER BUTTON -->
+    <label for="sidebar-toggle" class="menu-btn">
+        ☰
+    </label>
+    <header>
+        <label for="sidebar-toggle" class="close-btn">&times;</label>
+
+        <!-- LOGO -->
+        <div class="align1">
+            <img src="images/branding/logo1.svg" class="logo2" alt="University Cafeteria Logo">
+
+            <div id="logo">
+                <a href="index.html" id="university">UNIVERSITY</a>
+                <a href="index.html" id="cafeteria">CAFETERIA</a>
+            </div>
+        </div>
+        <!-- CENTER NAVIGATION -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="orders.html">ORDERS</a></li>
+                <li><a href="contact.html" class="active">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-- RIGHT SIDE: SEARCH BAR AND CART -->
+        <div class="header-right">
+            <!-- SEARCH BAR -->
+        <!-- SEARCH BAR -->
+        <div class="nav-search">
+            <input type="text" id="nav-search"
+                placeholder="Search menu..." autocomplete="off">
+            <button type="button" id="search-btn">
+                <img
+                    src="images/icons/magnifying-glass (1).png"
+                    class="magnifying-glass"
+                    alt="Search"
+                >
+            </button>
+            <!-- SEARCH DROPDOWN -->
+            <div class="search-dropdown" id="search-dropdown">
+
+                <p class="dropdown-title">Popular Searches</p>
+
+                <div id="search-suggestions"></div>
+            </div>
+        </div>
+            <!-- CART -->
+            <a href="cart.html" class="cart-link">
+                <img src="images/icons/shopping-cart.png" class="shopIcon" alt="">
+                CART
+                <span class="quantity-logo"></span>
+            </a>
+        </div>
+    </header>
+
+    <section class="special-title0">
+        <div class="line0"></div>
+        <h2>
+            CONTACT <span>US</span>
+        </h2>
+        <div class="line0"></div>
+    </section>
+
+<body>
+
+    <section class="contact-container">
+
+        <!-- LEFT SIDE: FORM -->
+        <div class="contact-form">
+
+            <form>
+
+                <label for="name">NAME</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    placeholder="ENTER YOUR NAME"
+                >
+
+                <label for="email">EMAIL</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="ENTER A VALID EMAIL ADDRESS"
+                >
+
+                <label for="message">SEND MESSAGE</label>
+                <textarea 
+                    id="message" 
+                    placeholder="COMMENT..."
+                ></textarea>
+
+                <button type="submit">SUBMIT</button>
+
+            </form>
+
+        </div>
+
+
+        <!-- RIGHT SIDE: INFORMATION -->
+        <div class="contact-info">
+
+            <h1>WE ARE HERE TO HELP!</h1>
+
+            <p>
+                We'd love to hear from you! Whether you have
+                questions about our menu, feedback on your
+                experience, or suggestions to help us improve,
+                our team is here to assist you. Feel free to reach
+                out through our contact details or send us a
+                message using the form below. We value every
+                inquiry and will do our best to respond as
+                quickly as possible. Thank you for choosing our
+                cafeteria, we look forward to serving you!
+            </p>
+            <img src="images/location/cict3.jpg" class="cict3" alt="cict3">
+        </div>
+    </section>
+    </section>
+
+        <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>University Cafeteria</h2>
+                <p>
+                    Your convenient way to explore the menu and discover
+                    delicious meals at the NEUST University Cafeteria.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+        <div class="footer-explore">
+            <h3>Explore</h3>
+            <p>🍽️ Meals</p>
+            <p>🥤 Drinks</p>
+            <p>🍪 Snacks</p>
+        </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 NEUST University Cafeteria. All Rights Reserved. This is a student project and is not an official NEUST website.</p>
+        </div>
+        </footer>
+        <script src="js/quantity.js"></script>
+        <script src="js/search.js"></script>
+    </body>
+</html>

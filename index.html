@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="images/branding/favicon.svg">
+    <title>NEUST University Cafeteria</title>
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cartModal.css">
+</head>
+<body>
+    <input type="checkbox" id="sidebar-toggle">
+    <!-- HAMBURGER BUTTON -->
+    <label for="sidebar-toggle" class="menu-btn">
+        <span>☰</span>
+    </label>
+<header>
+    <label for="sidebar-toggle" class="close-btn">&times;</label>
+
+    <!-- LOGO -->
+    <div class="align1">
+        <img src="images/branding/logo1.svg" class="logo2" alt="University Cafeteria Logo">
+
+        <div id="logo">
+            <a href="index.html" id="university">UNIVERSITY</a>
+            <a href="index.html" id="cafeteria">CAFETERIA</a>
+        </div>
+    </div>
+    <!-- CENTER NAVIGATION -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="orders.html">ORDERS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+<!-- RIGHT SIDE: SEARCH BAR AND CART -->
+<div class="header-right">
+    <!-- SEARCH BAR -->
+    <div class="nav-search">
+        <input type="text" id="nav-search"
+            placeholder="Search menu..." autocomplete="off">
+        <button type="button" id="search-btn">
+            <img
+                src="images/icons/magnifying-glass (1).png"
+                class="magnifying-glass"
+                alt="Search"
+            >
+        </button>
+        <!-- SEARCH DROPDOWN -->
+        <div class="search-dropdown" id="search-dropdown">
+            <p class="dropdown-title">Popular Searches</p>
+            <div id="search-suggestions"></div>
+        </div>
+    </div>
+
+    <!-- CART -->
+    <a href="cart.html" class="cart-link">
+        <img src="images/icons/shopping-cart.png" class="shopIcon" alt="">
+        CART
+        <span class="quantity-logo"></span>
+    </a>
+
+</div>
+</header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>WELCOME!</h1>
+
+            <p class="subt">
+                Explore today's menu and order your favorite meals from the NEUST University Cafeteria.
+            </p>
+
+            <div class="button-group">
+                <a href="menu.html" class="btn4" target="_self">ORDER NOW</a>
+                <a href="https://neust.edu.ph/" class="btn" target="_blank">VISIT NEUST WEBSITE</a>
+            </div>
+        </div>
+        <img src="images/campus/picture1.png" class="pic1" alt="adobo">
+        <img src="images/campus/img1.jpg" class="hero-bg" alt="img1">
+    </section>
+
+    <section class="special-title0">
+        <div class="line0"></div>
+        <h2>ABOUT <span>US</span></h2>
+        <div class="line0"></div>
+    </section>
+
+    <section class="aboutus">
+        <div class="container">
+
+                    <img src="images/branding/logoGIF.gif" class="hero-logo" alt="loading">
+            <div class="text">
+                <h1>Neust University Cafeteria</h1>
+                <p>
+                    Our website is designed to help students, faculty, staff, and visitors easily explore the cafeteria’s available food and beverage selections. Browse different menu categories, view item details and prices, and generate a receipt based on your selected items. Our goal is to provide a simple and organized way to view the cafeteria menu and estimate your total purchase before visiting the cafeteria.
+                </p>
+            </div>
+
+            <div class="vid">
+                <img src="images/campus/uc_pic.png" class="vid" alt="pic">
+            </div>
+        </div>
+
+        <div class="our-services" id="services">
+            <div class="services-container">
+
+                <!-- Dine-In Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/services/dineIN.png" class="service-icon" alt="dinein">
+                    </div>
+                    <h3>Dine-In Service</h3>
+                    <p>
+                        Enjoy your favorite meals in a comfortable
+                        space while spending time with friends
+                        and classmates.
+                    </p>
+                </div>
+
+                <!-- Takeaway Meals -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/services/takeOUT.png" class="service-icon" alt="takeaway">
+                    </div>
+                    <h3>Takeaway Meals</h3>
+                    <p>
+                        Take your favorite meals with you for just an additional ₱10 takeout fee, and enjoy them wherever your busy school day takes you.
+                    </p>
+                </div>
+
+                <!-- Convenient Food Choices -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/services/conv.png" class="service-icon" alt="takeaway">
+                    </div>
+                    <h3>Convenient Food Choices</h3>
+                    <p>
+                        Easily explore a variety of meals,
+                        snacks, and drinks to suit your needs
+                        throughout the day.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <section class="special-title">
+        <div class="line"></div>
+        <h2>TODAY'S <span>SPECIAL</span></h2>
+        <div class="line"></div>
+    </section>
+
+
+        <div class="parent">
+
+            <div class="div1">
+                <img src="images/food/food.jpg" class="imgf" alt="Bicol Express">
+                <h2 class="title1">BICOL EXPRESS</h2>
+                <h2 class="title2">₱85</h2>
+                <button type="button" class="btn2">ADD TO CART</button>
+            </div>
+
+            <div class="div3">
+                <img src="images/food/food.jpg" class="simgf" alt="Chicken Adobo">
+                <h2 class="stitle1">CHICKEN ADOBO</h2>
+                <h2 class="stitle2">₱75</h2>
+                <button type="button" class="sbtn2">ADD TO CART</button>
+            </div>
+
+            <div class="div4">
+                <img src="images/food/food.jpg" class="simgf" alt="Sisig Rice Meal">
+                <h2 class="stitle1">SISIG RICE MEAL</h2>
+                <h2 class="stitle2">₱90</h2>
+                <button type="button" class="sbtn2">ADD TO CART</button>
+            </div>
+
+            <div class="div5">
+                <img src="images/food/food.jpg" class="simgf" alt="Pork Sinigang">
+                <h2 class="stitle1">PORK SINIGANG</h2>
+                <h2 class="stitle2">₱95</h2>
+                <button type="button" class="sbtn2">ADD TO CART</button>
+            </div>
+
+            <div class="div6">
+                <img src="images/food/food.jpg" class="simgf" alt="Beef Tapa">
+                <h2 class="stitle1">BEEF TAPA</h2>
+                <h2 class="stitle2">₱100</h2>
+                <button type="button" class="sbtn2">ADD TO CART</button>
+            </div>
+
+            <div class="div7">
+                <img src="images/food/food.jpg" class="simgf" alt="Lumpia Shanghai">
+                <h2 class="stitle1">LUMPIA SHANGHAI</h2>
+                <h2 class="stitle2">₱50</h2>
+                <button type="button" class="sbtn2">ADD TO CART</button>
+            </div>
+
+            <div class="div8">
+                <img src="images/food/food.jpg" class="simgf" alt="Halo-Halo">
+                <h2 class="stitle1">HALO-HALO</h2>
+                <h2 class="stitle2">₱55</h2>
+                <button type="button" class="sbtn2">ADD TO CART</button>
+            </div>
+
+        </div>
+
+    <section class="special-title2">
+        <div class="line"></div>
+        <h2>EXPLORE <span>MORE</span></h2>
+        <div class="line"></div>
+    </section>
+
+    <div class="parent2">
+        <div class="fcard1" data-category="meals">
+            <img src="images/explore-more/meals.png" alt="Meals">
+            <h2>MEALS</h2>
+        </div>
+
+        <div class="fcard2" data-category="drinks">
+            <img src="images/explore-more/drinks.png" alt="Drinks">
+            <h2>DRINKS</h2>
+        </div>
+
+        <div class="fcard3" data-category="snacks">
+            <img src="images/explore-more/snacks.png" alt="Snacks">
+            <h2>SNACKS</h2>
+        </div>
+    </div>
+
+    <p class="pexplore">
+        Discover more of what the <span>NEUST University Cafeteria</span> has to offer. Explore our meals, drinks, and snacks, and find something delicious to enjoy today.
+    </p>
+
+    <section class="special-title3">
+        <div class="line"></div>
+        <h2>VISIT <span>US</span></h2>
+        <div class="line"></div>
+    </section>
+
+    <section class="visit">
+        <div class="allcontainer">
+            <img src="images/location/gmaps.png" class="gmaps" alt="Google Maps">
+
+            <div class="map-container">
+                <img src="images/location/map.png" class="mapp" alt="Map">
+
+                <a href="https://www.google.com/maps/place/NEUST+University+Cafeteria/@15.4450577,120.9368519,17z/data=!3m1!4b1!4m6!3m5!1s0x3397270046264d2f:0x98a21f9ae9380621!8m2!3d15.4450525!4d120.9394268!16s%2Fg%2F11zkgwq5zb?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+                   target="_blank"
+                   class="map-btn">
+                    Open in Google Maps
+                </a>
+            </div>
+
+            <div class="textv">
+                <h3 class="neustx">NEUST Sumacab Campus</h3>
+                <h2>Monday - Friday | 7:00 AM - 5:00 PM</h2>
+                <h1>(044) 123-4567</h1>
+                <h3>cafeteria@neust.edu.ph</h3>
+            </div>
+        </div>
+
+        <img src="images/location/cict.jpg" class="it" alt="cict">
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>University Cafeteria</h2>
+                <p>
+                    Your convenient way to explore the menu and discover
+                    delicious meals at the NEUST University Cafeteria.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-explore">
+                <h3>Explore</h3>
+                <p>🍽️ Meals</p>
+                <p>🥤 Drinks</p>
+                <p>🍪 Snacks</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 NEUST University Cafeteria. All Rights Reserved.
+                This is a student project and is not an official NEUST website.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/cartModal.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/quantity.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

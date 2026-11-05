@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/svg+xml" href="images/branding/favicon.svg">
+
+    <title>NEUST University Cafeteria</title>
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/cartModal.css">
+</head>
+<body>
+    <!-- SIDEBAR CHECKBOX -->
+    <input type="checkbox" id="sidebar-toggle">
+    <!-- HAMBURGER BUTTON -->
+    <label for="sidebar-toggle" class="menu-btn">
+        <span>☰</span>
+    </label>
+    <header>
+        <label for="sidebar-toggle" class="close-btn">&times;</label>
+
+        <!-- LOGO -->
+        <div class="align1">
+            <img src="images/branding/logo1.svg" class="logo2" alt="University Cafeteria Logo">
+
+            <div id="logo">
+                <a href="index.html" id="university">UNIVERSITY</a>
+                <a href="index.html" id="cafeteria">CAFETERIA</a>
+            </div>
+        </div>
+        <!-- CENTER NAVIGATION -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="menu.html" class="active">MENU</a></li>
+                <li><a href="orders.html">ORDERS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-- RIGHT SIDE: SEARCH BAR AND CART -->
+        <div class="header-right">
+        <!-- SEARCH BAR -->
+        <div class="nav-search">
+            <input type="text" id="nav-search"
+                placeholder="Search menu..." autocomplete="off">
+            <button type="button" id="search-btn">
+                <img
+                    src="images/icons/magnifying-glass (1).png"
+                    class="magnifying-glass"
+                    alt="Search"
+                >
+            </button>
+            <!-- SEARCH DROPDOWN -->
+            <div class="search-dropdown" id="search-dropdown">
+
+                <p class="dropdown-title">Popular Searches</p>
+
+                <div id="search-suggestions"></div>
+            </div>
+        </div>
+            <!-- CART -->
+            <a href="cart.html" class="cart-link">
+                <img src="images/icons/shopping-cart.png" class="shopIcon" alt="">
+                CART
+                <span class="quantity-logo"></span>
+            </a>
+        </div>
+    </header>
+
+    <section class="our-menu">
+        <h1>OUR MENU</h1>
+        <p>Explore our menu of delicious meals, snacks, and refreshing drinks, all at student-friendly prices. Find your favorites and enjoy every bite!</p>
+        <img src="images/campus/uc-exterior.png" class="menu-bg" alt="img1">
+
+        <form id="search-form">
+            <input
+                type="text"
+                id="search"
+                name="search"
+                placeholder="Search menu..."
+                autocomplete="off"
+            >
+        </form>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="category-section">
+        <h1>Categories:</h1>
+
+        <ul>
+            <li><a href="#all" class="active">All</a></li>
+            <li><a href="#meals">Meals</a></li>
+            <li><a href="#snacks">Snacks</a></li>
+            <li><a href="#drinks">Drinks</a></li>
+        </ul>
+    </section>
+
+    <!-- MENU ITEMS -->
+    <main>
+        <section class="menu-table" id="menu-table">
+
+            <!-- MEALS -->
+            <div class="menu-card" data-category="meals">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Bicol Express">
+                </div>
+                <div class="name"><h3>Bicol Express</h3></div>
+                <div class="price"><p>₱85.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="meals">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Chicken Adobo">
+                </div>
+                <div class="name"><h3>Chicken Adobo</h3></div>
+                <div class="price"><p>₱75.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="meals">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Pork Sisig Rice Meal">
+                </div>
+                <div class="name"><h3>Pork Sisig</h3></div>
+                <div class="price"><p>₱90.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="meals">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Fried Chicken">
+                </div>
+                <div class="name"><h3>Fried Chicken</h3></div>
+                <div class="price"><p>₱80.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="meals">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Pork Sinigang">
+                </div>
+                <div class="name"><h3>Pork Sinigang</h3></div>
+                <div class="price"><p>₱85.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="meals">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Pork Chop Rice Meal">
+                </div>
+                <div class="name"><h3>Pork Chop</h3></div>
+                <div class="price"><p>₱85.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="meals">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Beef Tapa">
+                </div>
+                <div class="name"><h3>Beef Tapa</h3></div>
+                <div class="price"><p>₱95.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="meals">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Hotdog">
+                </div>
+                <div class="name"><h3>Hotdog</h3></div>
+                <div class="price"><p>₱60.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- SNACKS -->
+            <div class="menu-card" data-category="snacks">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="French Fries">
+                </div>
+                <div class="name"><h3>French Fries</h3></div>
+                <div class="price"><p>₱40.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="snacks">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Cheeseburger">
+                </div>
+                <div class="name"><h3>Cheeseburger</h3></div>
+                <div class="price"><p>₱55.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="snacks">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Siomai">
+                </div>
+                <div class="name"><h3>Siomai</h3></div>
+                <div class="price"><p>₱35.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="snacks">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Cheese Sticks">
+                </div>
+                <div class="name"><h3>Cheese Sticks</h3></div>
+                <div class="price"><p>₱30.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="snacks">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Hotdog Sandwich">
+                </div>
+                <div class="name"><h3>Hotdog Sandwich</h3></div>
+                <div class="price"><p>₱45.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="snacks">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Banana Cue">
+                </div>
+                <div class="name"><h3>Banana Cue</h3></div>
+                <div class="price"><p>₱20.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- DRINKS -->
+            <div class="menu-card" data-category="drinks">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Bottled Water">
+                </div>
+                <div class="name"><h3>Bottled Water</h3></div>
+                <div class="price"><p>₱15.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="drinks">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Iced Tea">
+                </div>
+                <div class="name"><h3>Iced Tea</h3></div>
+                <div class="price"><p>₱25.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="drinks">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Iced Coffee">
+                </div>
+                <div class="name"><h3>Iced Coffee</h3></div>
+                <div class="price"><p>₱45.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="drinks">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Chocolate Milk">
+                </div>
+                <div class="name"><h3>Chocolate Milk</h3></div>
+                <div class="price"><p>₱30.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="drinks">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Soft Drinks">
+                </div>
+                <div class="name"><h3>Soft Drinks</h3></div>
+                <div class="price"><p>₱25.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="drinks">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Lemon Juice">
+                </div>
+                <div class="name"><h3>Lemon Juice</h3></div>
+                <div class="price"><p>₱25.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- STANDALONE RICE -->
+            <div class="menu-card"
+                 data-category="meals"
+                 data-standalone-rice="true">
+                <div class="image">
+                    <img src="images/food/food.jpg" alt="Plain Rice">
+                </div>
+                <div class="name"><h3>Plain Rice</h3></div>
+                <div class="price"><p>₱10.00</p></div>
+                <div class="add-to-cart">
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- NO RESULTS MESSAGE -->
+        <p id="no-results" hidden>No menu items found.</p>
+
+        <!-- ORDER BUTTON -->
+        <div class="order-button">
+            <a href="cart.html" class="confirm">
+                <h1>Order Now</h1>
+            </a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>University Cafeteria</h2>
+                <p>
+                    Your convenient way to explore the menu and discover
+                    delicious meals at the NEUST University Cafeteria.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-explore">
+                <h3>Explore</h3>
+                <p>🍽️ Meals</p>
+                <p>🥤 Drinks</p>
+                <p>🍪 Snacks</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 NEUST University Cafeteria. All Rights Reserved.
+                This is a student project and is not an official NEUST website.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/cartModal.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/quantity.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

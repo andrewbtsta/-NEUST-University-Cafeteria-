@@ -1,0 +1,163 @@
+/* ADD TO CART POPUP */
+
+.cart-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(26, 61, 117, 0.55);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.cart-modal-overlay.show {
+    opacity: 1;
+}
+
+.cart-modal {
+    width: 100%;
+    max-width: 380px;
+    overflow: hidden;
+    background: var(--beige);
+    border-radius: 30px;
+    text-align: center;
+    transform: scale(0.92);
+    transition: transform 0.25s ease;
+}
+
+.cart-modal-overlay.show .cart-modal {
+    transform: scale(1);
+}
+
+.cart-modal-top {
+    padding: 14px 20px;
+    background: var(--blue);
+    color: var(--beige);
+    font-size: 15px;
+}
+
+.cart-modal-top span {
+    color: var(--yellow);
+}
+
+.cart-modal-body {
+    padding: 24px 24px 8px;
+}
+
+.cart-modal-img {
+    display: block;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 16px;
+    object-fit: cover;
+    border: 4px solid var(--yellow);
+    border-radius: 50%;
+}
+
+.cart-modal-name {
+    margin: 0;
+    color: var(--blue);
+    font-size: 20px;
+}
+
+.cart-modal-price {
+    margin: 6px 0 0;
+    color: var(--yellow);
+    font-size: 22px;
+}
+
+.cart-modal-question {
+    margin: 14px 0 0;
+    color: #666;
+    font-size: 13px;
+}
+
+.cart-modal-actions {
+    display: flex;
+    gap: 12px;
+    padding: 20px 24px 24px;
+}
+
+.cart-modal-btn {
+    flex: 1;
+    padding: 13px 10px;
+    border-radius: 32px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.cart-modal-btn.cancel {
+    border: 2px solid var(--blue);
+    background: transparent;
+    color: var(--blue);
+}
+
+.cart-modal-btn.cancel:hover {
+    background: var(--blue);
+    color: var(--beige);
+}
+
+.cart-modal-btn.confirm-add {
+    border: 2px solid var(--yellow);
+    background: var(--yellow);
+    color: var(--beige);
+}
+
+.cart-modal-btn.confirm-add:hover {
+    filter: brightness(1.2);
+}
+
+.cart-modal-btn:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 2px;
+}
+
+
+/* "ADDED" TOAST */
+
+.cart-toast {
+    position: fixed;
+    left: 50%;
+    top: 81px;
+    z-index: 3100;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 90vw;
+    padding: 12px 22px;
+    background: var(--darkblue);
+    color: var(--beige);
+    border-radius: 30px;
+    font-size: 13px;
+    transform: translate(-50%, -30px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cart-toast.show {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+.cart-toast b {
+    color: var(--yellow);
+}
+
+.cart-toast a {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cart-modal-overlay,
+    .cart-modal,
+    .cart-toast {
+        transition: none;
+    }
+}

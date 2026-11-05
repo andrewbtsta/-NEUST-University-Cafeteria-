@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/svg+xml" href="images/branding/favicon.svg">
+
+    <title>NEUST University Cafeteria</title>
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/checkOut.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <!-- SIDEBAR CHECKBOX -->
+    <input type="checkbox" id="sidebar-toggle">
+
+    <!-- HAMBURGER BUTTON -->
+    <label for="sidebar-toggle" class="menu-btn">
+        <span>☰</span>
+    </label>
+    <header>
+        <label for="sidebar-toggle" class="close-btn">&times;</label>
+
+        <!-- LOGO -->
+        <div class="align1">
+            <img src="images/branding/logo1.svg" class="logo2" alt="University Cafeteria Logo">
+
+            <div id="logo">
+                <a href="index.html" id="university">UNIVERSITY</a>
+                <a href="index.html" id="cafeteria">CAFETERIA</a>
+            </div>
+        </div>
+        <!-- CENTER NAVIGATION -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="orders.html">ORDERS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-- RIGHT SIDE: SEARCH BAR AND CART -->
+        <div class="header-right">
+        <!-- SEARCH BAR -->
+        <div class="nav-search">
+            <input type="text" id="nav-search"
+                placeholder="Search menu..." autocomplete="off">
+            <button type="button" id="search-btn">
+                <img
+                    src="images/icons/magnifying-glass (1).png"
+                    class="magnifying-glass"
+                    alt="Search"
+                >
+            </button>
+            <!-- SEARCH DROPDOWN -->
+            <div class="search-dropdown" id="search-dropdown">
+
+                <p class="dropdown-title">Popular Searches</p>
+
+                <div id="search-suggestions"></div>
+            </div>
+        </div>
+            <!-- CART -->
+            <a href="cart.html" class="cart-link">
+                <img src="images/icons/shopping-cart.png" class="shopIcon" alt="">
+                CART
+                <span class="quantity-logo"></span>
+            </a>
+        </div>
+    </header>
+
+    <!-- PAGE TITLE -->
+    <section class="special-title0">
+        <div class="line0"></div>
+        <h2>CHECK <span>OUT</span></h2>
+        <div class="line0"></div>
+    </section>
+
+    <!-- CHECKOUT CONTENT -->
+    <section class="check">
+
+        <div class="overall">
+
+            <!-- ORDER DETAILS AND PAYMENT -->
+            <div class="orderDetails">
+
+                <h1>ORDER DETAILS</h1>
+
+                <form id="checkout-form">
+
+                    <label class="studentLabel" for="name">
+                        STUDENT NAME
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="ENTER YOUR NAME"
+                        required
+                    >
+
+                    <label class="studentLabel" for="idNum">
+                        STUDENT ID
+                    </label>
+                    <input
+                        type="text"
+                        id="idNum"
+                        name="idNum"
+                        placeholder="FORMAT: AYYYY-XXXXX"
+                        pattern="[A-Za-z]{1,4}[0-9]{4}-[0-9]{5}"
+                        title="Invalid Student ID. Use Campus Initials, a hyphen, and 5 ID digits. Example: SUM2025-00016."
+                        required
+                    >
+
+                    <!-- PAYMENT METHOD -->
+                    <h2 class="payment-title">PAYMENT METHOD</h2>
+
+                    <div class="payment-options">
+
+                        <label class="payment-option" for="cash">
+                            <input
+                                type="radio"
+                                id="cash"
+                                name="methodType"
+                                value="cash"
+                                required
+                            >
+                            <span>CASH</span>
+                        </label>
+
+                        <label class="payment-option" for="gcash">
+                            <input
+                                type="radio"
+                                id="gcash"
+                                name="methodType"
+                                value="gcash"
+                            >
+                            <span>GCASH</span>
+                        </label>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- ORDER SUMMARY -->
+            <div class="paymentMethod">
+
+                <div class="order-summary">
+
+                    <h1>ORDER SUMMARY</h1>
+
+                    <div class="scroll">
+
+                        <table class="order-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Qty</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="summary-items">
+                                <!-- JavaScript will display cart items here -->
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td></td>
+                                    <td>Total:</td>
+                                    <td id="summary-total">₱0.00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <p id="summary-empty">
+                            Your cart is empty.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONFIRM ORDER -->
+        <div class="confirm-container">
+            <button type="submit" form="checkout-form" class="confirm" id="confirm-order">
+                <span class="confirm-label">Confirm Order</span>
+            </button>
+            <p class="confirm-note" id="confirm-note" role="status" aria-live="polite"></p>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>University Cafeteria</h2>
+                <p>
+                    Your convenient way to explore the menu and discover
+                    delicious meals at the NEUST University Cafeteria.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-explore">
+                <h3>Explore</h3>
+                <p>🍽️ Meals</p>
+                <p>🥤 Drinks</p>
+                <p>🍪 Snacks</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 NEUST University Cafeteria. All Rights Reserved.
+                This is a student project and is not an official NEUST website.
+            </p>
+        </div>
+
+    </footer>
+
+    <!-- EXTERNAL JAVASCRIPT -->
+    <script src="js/checkOut.js"></script>
+    <script src="js/quantity.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

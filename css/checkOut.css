@@ -1,0 +1,558 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--beige);
+    overflow-x: hidden;
+}
+
+
+/* PAGE TITLE */
+
+.special-title0 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 116px 0 0;
+}
+
+.special-title0 h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #3b69b4;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.special-title0 span {
+    color: #ffb300;
+}
+
+.line0 {
+    flex: 1;
+    height: 4px;
+    background: #3b69b4;
+    border-radius: 10px;
+}
+
+.line0:last-child {
+    background: #ffb300;
+}
+
+
+/* CHECKOUT LAYOUT */
+
+.check {
+    width: 100%;
+    margin: 50px 0 60px;
+}
+
+.overall {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+
+/* LEFT CARD */
+
+.orderDetails {
+    width: 500px;
+    height: 433px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 10px 25px;
+    text-align: center;
+    background-color: var(--blue);
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(9, 1, 84, 0.2);
+}
+
+.orderDetails h1,
+.paymentMethod h1 {
+    color: var(--beige);
+    font-size: 32px;
+}
+
+.orderDetails form {
+    margin-top: 30px;
+    text-align: left;
+}
+
+
+/* STUDENT INPUTS */
+
+.orderDetails .studentLabel {
+    display: block;
+    margin: 18px 0 8px 8px;
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.orderDetails input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 18px;
+    background-color: white;
+    font-size: 13px;
+}
+
+.orderDetails input[type="text"]::placeholder {
+    color: #999;
+}
+
+.orderDetails input[type="text"]:focus {
+    outline: 2px solid var(--yellow);
+    color: var(--blue);
+}
+
+
+/* PAYMENT METHOD */
+
+.payment-title {
+    margin-top: 33px;
+    text-align: center;
+    color: var(--yellow);
+    font-size: 32px;
+}
+
+.payment-options {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 135px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--beige);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.payment-option span {
+    transition: color 0.2s ease;
+}
+
+.payment-option:has(input:checked) span {
+    color: var(--yellow);
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    flex-shrink: 0;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: var(--yellow);
+    border-color: white;
+}
+
+
+/* RIGHT CARD */
+
+.paymentMethod {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 433px;
+    min-width: 0;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: var(--yellow);
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(9, 1, 84, 0.2);
+}
+
+
+/* ORDER SUMMARY */
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    background-color: var(--yellow);
+    border-radius: 18px;
+}
+
+.order-summary h1 {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 8px 15px;
+    font-size: 32px;
+    text-align: center;
+}
+
+
+/* SCROLL AREA */
+
+.scroll {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+
+/* ORDER TABLE */
+
+.order-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    border-collapse: collapse;
+    color: white;
+}
+
+
+/* TABLE HEADER */
+
+.order-table thead {
+    display: table;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    width: 100%;
+    table-layout: fixed;
+    flex-shrink: 0;
+    background: rgb(183, 143, 0);
+    color: var(--beige);
+}
+
+
+/* SCROLLABLE FOOD ITEMS */
+
+.order-table tbody {
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    background-color: #00000022;
+    display: block;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.order-table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+
+/* TABLE CELLS */
+
+.order-table th,
+.order-table td {
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.order-table th:nth-child(1),
+.order-table td:nth-child(1) {
+    width: 40%;
+}
+
+.order-table th:nth-child(2),
+.order-table td:nth-child(2) {
+    width: 25%;
+    text-align: center;
+}
+
+.order-table th:nth-child(3),
+.order-table td:nth-child(3) {
+    width: 35%;
+    text-align: right;
+    padding-right: 16px;
+}
+
+
+/* TOTAL PRICE AT THE BOTTOM */
+
+.order-table tfoot {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    flex-shrink: 0;
+    background-color: var(--yellow);
+    color: var(--beige);
+}
+
+.order-table tfoot td {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* EMPTY CART */
+
+#summary-empty {
+    display: none;
+    flex-shrink: 0;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    color: var(--blue);
+}
+
+
+/* SCROLLBAR */
+
+.order-table tbody::-webkit-scrollbar {
+    width: 4px;
+}
+
+.order-table tbody::-webkit-scrollbar-track {
+    background: var(--beige);
+    border-radius: 4px;
+}
+
+.order-table tbody::-webkit-scrollbar-thumb {
+    background: #aaa9a4;
+    border-radius: 8px;
+}
+
+
+/* CONFIRM BUTTON */
+
+.confirm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.confirm {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 494px;
+    max-width: 90%;
+    height: 61px;
+    padding: 0 28px;
+    box-sizing: border-box;
+    color: var(--beige);
+    background: var(--yellow);
+    border: none;
+    border-radius: 34px;
+    cursor: pointer;
+    font-size: 21px;
+    transition: 0.3s;
+}
+
+.confirm:hover:not(:disabled) {
+    filter: brightness(1.2);
+}
+
+.confirm:active:not(:disabled) {
+    filter: brightness(1.05);
+}
+
+.confirm:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 4px;
+}
+
+.confirm-label {
+    font-size: 21px;
+    letter-spacing: 0.5px;
+}
+
+/* DISABLED (EMPTY CART) */
+.confirm:disabled {
+    cursor: not-allowed;
+    background: #c9c4ba;
+}
+
+/* VALIDATION ERROR */
+.confirm.shake {
+    animation: confirm-shake 0.4s ease;
+}
+
+.confirm-note {
+    margin: 0;
+    min-height: 16px;
+    color: var(--blue);
+    font-size: 13px;
+    text-align: center;
+}
+
+.confirm-note a {
+    color: var(--darkblue);
+    text-decoration: underline;
+}
+
+@keyframes confirm-shake {
+    0%, 100% { translate: 0; }
+    20%, 60% { translate: -8px; }
+    40%, 80% { translate: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .confirm,
+    .confirm * {
+        transition: none !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    /* PAGE TITLE */
+
+    .special-title0 {
+        margin-top: 100px;
+        gap: 10px;
+    }
+
+    .special-title0 h2 {
+        font-size: 28px;
+    }
+
+    .line0 {
+        height: 4px;
+    }
+
+
+    /* STACK THE CARDS */
+
+    .check {
+        margin-top: 40px;
+    }
+
+    .overall {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 0 20px;
+    }
+
+
+    /* CARD WIDTHS */
+
+    .orderDetails,
+    .paymentMethod {
+        width: 100%;
+        max-width: 500px;
+        flex-shrink: 1;
+        border-radius: 25px;
+    }
+
+    .orderDetails {
+        height: 433px;
+        padding: 10px 22px;
+    }
+
+    .paymentMethod {
+        height: 550px;
+        padding: 15px;
+    }
+
+
+    /* INPUTS */
+
+    .orderDetails form {
+        margin-top: 25px;
+    }
+
+    .studentLabel {
+        margin-left: 5px;
+    }
+
+    input[type="text"] {
+        padding: 11px;
+    }
+
+
+    /* PAYMENT OPTIONS */
+
+    .payment-title {
+        font-size: 20px;
+        margin-top: 25px;
+    }
+
+    .payment-options {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .payment-option {
+        font-size: 14px;
+    }
+
+
+    /* ORDER SUMMARY */
+
+    .order-summary h1 {
+        padding: 15px 12px;
+        font-size: 20px;
+    }
+
+    .order-table th,
+    .order-table td {
+        padding: 9px 8px;
+        font-size: 12px;
+    }
+
+    .order-table th:last-child,
+    .order-table td:last-child {
+        padding-right: 10px;
+    }
+
+    .order-table tfoot td {
+        font-size: 16px;
+    }
+
+
+    /* CONFIRM BUTTON */
+
+    .confirm-container {
+        margin-top: 25px;
+    }
+
+    .confirm {
+        width: 305px;
+        height: 55px;
+        padding: 0 18px;
+    }
+
+    .confirm-label {
+        font-size: 16px;
+    }
+
+
+}
