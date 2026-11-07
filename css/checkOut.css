@@ -368,14 +368,14 @@ input[type="radio"]:checked {
     border-radius: 34px;
     cursor: pointer;
     font-size: 16px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.confirm:hover:not(:disabled) {
+.confirm:hover {
     filter: brightness(1.2);
 }
 
-.confirm:active:not(:disabled) {
+.confirm:active {
     filter: brightness(1.05);
 }
 
@@ -411,21 +411,6 @@ input[type="radio"]:checked {
     color: var(--darkblue);
     text-decoration: underline;
 }
-
-@keyframes confirm-shake {
-    0%, 100% { translate: 0; }
-    20%, 60% { translate: -8px; }
-    40%, 80% { translate: 8px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .confirm,
-    .confirm * {
-        transition: none !important;
-        animation-duration: 0.01ms !important;
-    }
-}
-
 
 /* MOBILE */
 
