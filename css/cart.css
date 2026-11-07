@@ -224,14 +224,10 @@ body {
 
 .conshop:hover {
     filter: brightness(1.2);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(6, 43, 99, 0.25);
 }
 
 .checkout:hover {
-    filter: brightness(1.1);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(6, 43, 99, 0.25);
+    filter: brightness(1.2);
 }
 
 /* Remove List Markers */
