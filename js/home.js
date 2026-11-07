@@ -73,3 +73,40 @@ categoryCards.forEach(function(card) {
     });
 
 });
+
+// =========================
+// VIDEO INTRO
+// =========================
+
+const intro = document.getElementById("intro");
+const video = document.getElementById("intro-video");
+
+function finishIntro() {
+    if (!intro || intro.classList.contains("hide")) return;
+
+    video.pause();
+    intro.classList.add("hide");
+
+    sessionStorage.setItem("introPlayed", "true");
+
+    intro.addEventListener("transitionend", function (event) {
+        if (event.propertyName === "opacity") {
+            intro.remove();
+            document.body.classList.add("intro-finished");
+        }
+    }, { once: true });
+}
+
+if (intro && video) {
+    if (sessionStorage.getItem("introPlayed")) {
+        intro.remove();
+        document.body.classList.add("intro-finished");
+    } else {
+        document.body.classList.remove("intro-finished");
+
+        video.addEventListener("ended", finishIntro, { once: true });
+        video.addEventListener("error", finishIntro, { once: true });
+
+        video.play().catch(finishIntro);
+    }
+}
