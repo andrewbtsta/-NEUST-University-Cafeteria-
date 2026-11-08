@@ -129,12 +129,12 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    max-width: 90vw;
+    max-width: 97vw;
     padding: 12px 22px;
     background: rgba(13, 68, 156, 0.74);
     color: var(--beige);
     border-radius: 30px;
-    font-size: 13px;
+    font-size: 14px;
     transform: translate(-50%, -30px);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -159,11 +159,5 @@
     .cart-modal,
     .cart-toast {
         transition: none;
-    }
-
-    .cart-toast {
-    width: 170px;
-    font-size: 8px;
-        
     }
 }
