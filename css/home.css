@@ -1188,7 +1188,7 @@ body.intro-finished {
 }
 
 .visit h1 {
-    font-size: 9px;
+    font-size: 18px;
 }
 
 .textv {
@@ -1230,10 +1230,10 @@ body.intro-finished {
 .map-btn {  
     position: absolute;
     top: 106%;
-    left: 23%;
+    left: 21%;
     padding: 11px 24px;
     font-size: 14px;
-    width: 162px;
+    width: 186px;
 }
 
 .gmaps {
