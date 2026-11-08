@@ -162,7 +162,8 @@
     }
 
     .cart-toast {
-       width: 80%;
-       text-align: center;
+    width: 90%;
+    font-size: 8px;
+        
     }
 }
