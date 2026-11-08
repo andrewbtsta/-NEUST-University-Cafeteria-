@@ -462,7 +462,7 @@ header {
     }
 
     .logo2 {
-        width: 65px;
+        width: 90px;
     }
 
     #logo {
@@ -470,6 +470,7 @@ header {
     }
 
     #university {
+        position: relative;
         font-size: 14px;
         margin-bottom: -1px;
         text-align: center;
