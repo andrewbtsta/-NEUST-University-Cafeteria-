@@ -461,6 +461,11 @@ input[type="radio"]:checked {
         padding: 10px 22px;
     }
 
+    .orderDetails h1{
+
+        font-size: 28px;
+    }
+
     .paymentMethod {
         height: 550px;
         padding: 15px;
@@ -485,7 +490,7 @@ input[type="radio"]:checked {
     /* PAYMENT OPTIONS */
 
     .payment-title {
-        font-size: 20px;
+        font-size: 24px;
         margin-top: 25px;
     }
 
@@ -496,6 +501,7 @@ input[type="radio"]:checked {
     }
 
     .payment-option {
+        margin-top: 8px;
         font-size: 14px;
     }
 
@@ -504,7 +510,7 @@ input[type="radio"]:checked {
 
     .order-summary h1 {
         padding: 15px 12px;
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .order-table th,
@@ -530,13 +536,23 @@ input[type="radio"]:checked {
     }
 
     .confirm {
-        width: 305px;
-        height: 55px;
+        width: 228px;
+        height: 48px;
         padding: 0 18px;
     }
 
     .confirm-label {
         font-size: 16px;
+    }
+
+    .order-table thead {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+    .order-table tbody {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
     }
 
 
