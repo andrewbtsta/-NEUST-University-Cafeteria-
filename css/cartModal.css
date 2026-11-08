@@ -162,6 +162,7 @@
     }
 
     .cart-toast {
-       width: 74%;
+       width: 80%;
+       text-align: center;
     }
 }
