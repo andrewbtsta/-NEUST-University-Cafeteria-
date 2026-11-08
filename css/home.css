@@ -859,11 +859,11 @@ body.intro-finished {
     }
 
     .title2 {
-        font-size: 19px;
+        font-size: 23px;
     }
 
     .stitle2 {
-        font-size: 19px;
+        font-size: 18px;
     }
 
     /* MAIN BUTTON */
@@ -871,6 +871,7 @@ body.intro-finished {
         display: block;
         border-radius: 18px;
         width: auto;
+        margin-top: 8%;
         margin-left: auto;
         margin-right: 8;
         padding: 12px 22px;
@@ -882,10 +883,11 @@ body.intro-finished {
         display: block;
         border-radius: 18px;
         width: auto;
+        margin-top: 11%;
         margin-left: auto;
-        margin-right: 8;
+        margin-right: 10;
         padding: 9px 20px;
-        font-size: 7px;
+        font-size: 8px;
     }
 
     /* IMAGES */
