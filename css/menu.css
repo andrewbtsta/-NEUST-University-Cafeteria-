@@ -358,36 +358,39 @@ li a {
     .menu-card {
         height: 230px;
         padding: 10px;
-        border-radius: 23px;
+        border-radius: 28px;
     }
 
     .menu-card .image img {
         height: 105px;
-        border-radius: 13px;
+        border-radius: 18px;
     }
 
     .menu-card .name h3 {
-        font-size: 14px;
+        font-size: 12px;
         margin: 12px 0 5px;
     }
 
     .menu-card .price p {
-        font-size: 15px;
+        font-size: 18px;
         margin: 5px 0 12px;
     }
 
     /* ADD TO CART */
 
     .add-to-cart button {
-        width: 100%;
-        padding: 10px 5px;
-        font-size: 11px;
+        width: 68%;
+       margin-top: 18px;
+        padding: 8px 4px;
+        margin-left: auto;
+        margin-right: 6;
+        font-size: 8px;
     }
 
     /* VIEW CART */
 
     .confirm {
-        width: 90%;
+        width: 60%;
         margin: 15px auto 45px;
         padding: 14px;
     }

@@ -160,4 +160,8 @@
     .cart-toast {
         transition: none;
     }
+
+    .cart-toast {
+       width: 74%;
+    }
 }
